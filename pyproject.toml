@@ -1,0 +1,14 @@
+[project]
+name = "juwelen-sprung"
+version = "0.1.0"
+description = "Ein sehr kleines Pygame-Spiel für den OOP-Einstieg."
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "pygame>=2.5,<3.0",
+]
+
+[tool.uv]
+package = false
+
+[dependency-groups]
+dev = []

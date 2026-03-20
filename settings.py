@@ -1,0 +1,33 @@
+from __future__ import annotations
+
+from pathlib import Path
+
+WINDOW_WIDTH = 960
+WINDOW_HEIGHT = 640
+FPS = 60
+TITLE = "Dino Runner"
+
+GROUND_Y = 520
+
+PLAYER_X = 140
+PLAYER_WIDTH = 42
+PLAYER_HEIGHT = 56
+PLAYER_SPRITE_SIZE = (96, 96)
+GRAVITY = 1_600.0
+JUMP_SPEED = -700.0
+WALK_ANIMATION_SPEED = 4.0
+
+OBSTACLE_SPEED = 320.0
+OBSTACLE_WIDTH = 52
+OBSTACLE_HEIGHT = 70
+OBSTACLE_DISTANCE_MIN = 260
+OBSTACLE_DISTANCE_MAX = 420
+
+HUD_TEXT_COLOR = (28, 31, 38)
+HUD_PANEL_COLOR = (255, 255, 255)
+WIN_PANEL_COLOR = (27, 40, 56, 200)
+WIN_TEXT_COLOR = (255, 248, 214)
+
+ROOT_DIR = Path(__file__).resolve().parent
+SPRITES_DIR = ROOT_DIR / "assets" / "global" / "Sprites"
+SOUNDS_DIR = ROOT_DIR / "assets" / "global" / "Sounds"

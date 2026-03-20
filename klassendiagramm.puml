@@ -1,0 +1,46 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Game {
+  -assets: AssetStore
+  -player: Player
+  -obstacles: list
+  -spawn_timer: float
+  -score: int
+  -game_over: bool
+  +run(): void
+}
+
+class AssetStore {
+  +background: Surface
+  +clouds: Surface
+  +ground: Surface
+  +player_idle: Surface
+  +player_jump: Surface
+  +player_walk_frames: tuple
+  +obstacle: Surface
+  +obstacle_small: Surface
+  +jump_sound: Sound
+  +hit_sound: Sound
+}
+
+class Player {
+  +rect: Rect
+  -on_ground: bool
+  +update(dt, jump_pressed): bool
+  +draw(surface): void
+}
+
+class Obstacle {
+  +rect: Rect
+  +passed_player: bool
+  +update(dt): void
+  +draw(surface): void
+  +is_off_screen(): bool
+}
+
+Game --> AssetStore
+Game --> Player
+Game o-- Obstacle
+Player --> AssetStore
+@enduml
